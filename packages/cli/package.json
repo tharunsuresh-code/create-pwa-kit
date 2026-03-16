@@ -1,6 +1,6 @@
 {
   "name": "create-pwa-kit",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Scaffold a production-ready Next.js 14 PWA in seconds",
   "license": "MIT",
   "homepage": "https://github.com/tharunsuresh-code/create-pwa-kit",
