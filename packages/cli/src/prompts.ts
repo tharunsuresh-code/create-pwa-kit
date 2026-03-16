@@ -44,7 +44,7 @@ export async function runPrompts(nameArg?: string): Promise<CliOptions> {
 
   if (includeSupabase) {
     const supabaseFeatures = (await p.multiselect({
-      message: "Supabase features",
+      message: "Supabase features  (Space to select, Enter to confirm)",
       options: [
         { value: "auth", label: "Authentication (Google OAuth + OTP email)" },
         { value: "data-model", label: "Database starter schema + migrations" },
