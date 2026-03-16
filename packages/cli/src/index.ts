@@ -3,7 +3,7 @@
 import * as path from "path";
 import * as fs from "fs-extra";
 import * as p from "@clack/prompts";
-import { execSync } from "child_process";
+import { spawn } from "child_process";
 import { runPrompts } from "./prompts";
 import { scaffold } from "./scaffold";
 import { supabasePack } from "./features/supabase";
@@ -57,10 +57,32 @@ async function main() {
 
   if (!skipInstall && opts.installDeps) {
     s.start("Installing dependencies...");
+    const startTime = Date.now();
+    const timer = setInterval(() => {
+      const elapsed = Math.floor((Date.now() - startTime) / 1000);
+      s.message(`Installing dependencies... ${elapsed}s`);
+    }, 1000);
+
     try {
-      execSync("npm install", { cwd: dest, stdio: "pipe" });
-      s.stop("Dependencies installed.");
+      const output = await new Promise<string>((resolve, reject) => {
+        let out = "";
+        const proc = spawn("npm", ["install"], {
+          cwd: dest,
+          stdio: ["ignore", "pipe", "pipe"],
+        });
+        proc.stdout.on("data", (d: Buffer) => { out += d.toString(); });
+        proc.stderr.on("data", (d: Buffer) => { out += d.toString(); });
+        proc.on("close", (code) => {
+          if (code === 0) resolve(out);
+          else reject(new Error(out.slice(-500)));
+        });
+      });
+
+      clearInterval(timer);
+      const match = output.match(/added (\d+) packages?/);
+      s.stop(match ? `Dependencies installed (${match[1]} packages).` : "Dependencies installed.");
     } catch {
+      clearInterval(timer);
       s.stop("npm install failed — run it manually.");
     }
   }
