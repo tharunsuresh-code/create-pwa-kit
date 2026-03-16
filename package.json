@@ -1,0 +1,13 @@
+{
+  "name": "create-pwa-kit",
+  "private": true,
+  "version": "0.0.0",
+  "description": "PWA scaffolding CLI for production-ready Next.js 14 PWAs",
+  "scripts": {
+    "build": "pnpm -r run build",
+    "dev": "pnpm -r run dev"
+  },
+  "devDependencies": {
+    "typescript": "^5.3.3"
+  }
+}

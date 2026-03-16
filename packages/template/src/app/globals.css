@@ -1,0 +1,13 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* iOS safe area bottom padding for nav */
+.pb-nav {
+  padding-bottom: calc(3.5rem + env(safe-area-inset-bottom, 0px) + 1rem);
+}
+
+/* Safe area bottom padding */
+.pb-safe {
+  padding-bottom: env(safe-area-inset-bottom, 0px);
+}
