@@ -8,7 +8,7 @@
     "create-pwa-kit": "./dist/index.js"
   },
   "scripts": {
-    "build": "tsup src/index.ts --format cjs --dts --clean && cp -r ../template dist/template",
+    "build": "tsup src/index.ts --format cjs --dts --clean && rm -rf dist/template && cp -r ../template dist/template",
     "dev": "tsup src/index.ts --format cjs --watch"
   },
   "dependencies": {
