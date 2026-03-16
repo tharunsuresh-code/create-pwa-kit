@@ -3,9 +3,10 @@
   "private": true,
   "version": "0.0.0",
   "description": "PWA scaffolding CLI for production-ready Next.js 14 PWAs",
+  "workspaces": ["packages/*"],
   "scripts": {
-    "build": "pnpm -r run build",
-    "dev": "pnpm -r run dev"
+    "build": "npm run build -w packages/cli",
+    "dev": "npm run dev -w packages/cli"
   },
   "devDependencies": {
     "typescript": "^5.3.3"
