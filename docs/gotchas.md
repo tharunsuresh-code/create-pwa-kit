@@ -87,6 +87,16 @@ The scaffold sets `Service-Worker-Allowed: /` in `next.config.mjs` headers. This
 
 **Never cache `/api/` routes without a cache invalidation strategy.** The scaffold's `sw.js` caches `/_next/static/` (safe — these are content-hashed) and uses network-first for navigation. API routes are intentionally not cached by the SW.
 
+**Do not register the service worker in development.** If the SW runs in dev mode, its cache-first strategy intercepts `/_next/static/chunks/` requests. When Next.js HMR updates a chunk (same URL, new content), the SW serves the stale cached version. Webpack then fails to find the updated module factories and throws `originalFactory is undefined`, causing random page crashes in dev.
+
+The scaffold guards against this in `ServiceWorkerRegistrar.tsx`:
+
+```ts
+if (process.env.NODE_ENV !== "production") return;
+```
+
+The SW is a production-only concern. You cannot meaningfully test offline behavior or push notifications over plain `http://localhost` anyway — both require a real HTTPS origin.
+
 ---
 
 ## Android Back Button
