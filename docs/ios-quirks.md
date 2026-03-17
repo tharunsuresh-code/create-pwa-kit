@@ -1,3 +1,8 @@
+---
+title: iOS Quirks
+nav_order: 7
+---
+
 # iOS Quirks
 
 iOS PWAs have a unique set of constraints and behaviors that differ from Android and desktop. These are the things worth knowing before you ship.

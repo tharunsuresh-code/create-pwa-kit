@@ -1,3 +1,9 @@
+---
+title: Home
+layout: home
+nav_order: 1
+---
+
 # create-pwa-kit
 
 > Scaffold a production-ready Next.js 14 PWA in seconds.
@@ -8,13 +14,17 @@ npx create-pwa-kit my-app
 
 Built from hard-won experience shipping [OneKural](https://onekural.com) — a production PWA. All the tricky bits are pre-wired.
 
+---
+
 ## What you get
 
-- **Service worker** — cache-first assets, network-first navigation, offline fallback
-- **Web App Manifest** — with placeholder icons ready for customization
-- **Dark mode** — class-based Tailwind, three-way toggle (light/dark/system), persists in localStorage
-- **PWA meta tags** — `theme-color`, `viewport-fit=cover`, `apple-mobile-web-app-capable`
-- **Security headers** — CSP, X-Frame-Options, Referrer-Policy via `next.config.mjs`
+| Feature | Details |
+|---------|---------|
+| **Service worker** | Cache-first assets, network-first navigation, offline fallback |
+| **Web App Manifest** | Placeholder icons ready for customization |
+| **Dark mode** | Class-based Tailwind, three-way toggle (light/dark/system), persists in localStorage |
+| **PWA meta tags** | `theme-color`, `viewport-fit=cover`, `apple-mobile-web-app-capable` |
+| **Security headers** | CSP, X-Frame-Options, Referrer-Policy via `next.config.mjs` |
 
 ## Optional features
 
@@ -44,19 +54,6 @@ npx create-pwa-kit my-app
 ✔  Done! cd my-app && cp .env.example .env.local
 ```
 
-## Documentation
+---
 
-- [Getting started](docs/getting-started.md)
-- [Features](docs/features.md)
-- [PWA gotchas](docs/gotchas.md)
-- [Push notifications](docs/push-notifications.md)
-- [Deployment](docs/deployment.md)
-- [iOS quirks](docs/ios-quirks.md)
-
-## Contributing
-
-Contributions are welcome! See [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines.
-
-## License
-
-MIT
+[Get started](getting-started){: .btn .btn-primary } &nbsp; [View on GitHub](https://github.com/tharunsuresh-code/create-pwa-kit){: .btn }
