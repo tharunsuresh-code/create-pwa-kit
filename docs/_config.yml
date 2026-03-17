@@ -38,3 +38,11 @@ callouts:
 plugins:
   - jekyll-remote-theme
   - jekyll-seo-tag
+
+# Apply the default just-the-docs layout to every page
+defaults:
+  - scope:
+      path: ""
+      type: pages
+    values:
+      layout: default
