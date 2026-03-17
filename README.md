@@ -53,6 +53,10 @@ npx create-pwa-kit my-app
 - [Deployment](docs/deployment.md)
 - [iOS quirks](docs/ios-quirks.md)
 
+## Contributing
+
+Contributions are welcome! See [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines.
+
 ## License
 
 MIT
