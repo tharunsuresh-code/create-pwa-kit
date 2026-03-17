@@ -1,0 +1,40 @@
+title: create-pwa-kit
+description: Scaffold a production-ready Next.js 14 PWA in seconds.
+baseurl: "/create-pwa-kit"
+url: "https://tharunsuresh-code.github.io"
+
+remote_theme: just-the-docs/just-the-docs@v0.10.1
+
+# Search
+search_enabled: true
+
+# Aux links in the top-right corner
+aux_links:
+  "GitHub":
+    - "https://github.com/tharunsuresh-code/create-pwa-kit"
+
+aux_links_new_tab: true
+
+# Footer
+footer_content: "MIT License &mdash; <a href=\"https://github.com/tharunsuresh-code/create-pwa-kit\">create-pwa-kit</a>"
+
+# Back to top link
+back_to_top: true
+back_to_top_text: "Back to top"
+
+# Callouts
+callouts:
+  note:
+    title: Note
+    color: blue
+  warning:
+    title: Warning
+    color: yellow
+  tip:
+    title: Tip
+    color: green
+
+# Plugins (GitHub Pages safe-list)
+plugins:
+  - jekyll-remote-theme
+  - jekyll-seo-tag

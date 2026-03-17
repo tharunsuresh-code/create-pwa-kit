@@ -1,3 +1,8 @@
+---
+title: Features
+nav_order: 3
+---
+
 # Features
 
 All features are opt-in during the CLI prompt flow. The base scaffold ships without any of them — add only what you need.

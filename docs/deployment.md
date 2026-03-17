@@ -1,3 +1,8 @@
+---
+title: Deployment
+nav_order: 4
+---
+
 # Deployment
 
 The scaffold is optimized for deployment on Vercel, the platform built by the Next.js team. Other platforms that support Next.js (Netlify, Railway, Render) will work but may require additional configuration for service worker headers.

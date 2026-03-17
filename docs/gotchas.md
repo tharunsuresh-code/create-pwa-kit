@@ -1,3 +1,8 @@
+---
+title: PWA Gotchas
+nav_order: 6
+---
+
 # PWA Gotchas
 
 Hard-won knowledge from shipping a production PWA. These are the things that are not obvious from the docs and will cost you hours if you hit them cold.

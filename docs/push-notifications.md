@@ -1,3 +1,8 @@
+---
+title: Push Notifications
+nav_order: 5
+---
+
 # Push Notifications
 
 The push notification feature pack wires up everything needed for server-sent push notifications: VAPID key management, browser subscription, API routes, a Vercel cron for scheduled sends, and automatic cleanup of expired subscriptions.
